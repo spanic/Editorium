@@ -1,0 +1,20 @@
+.mainTitle, .article, .quote, .newList {
+	margin: 30px 0 30px 0;
+}
+
+.newList {
+	margin: 30px auto;
+}
+
+.date {
+	text-align: center;
+	background-color: #F4F3F8;
+	height: 47px;
+	font-family: PTSansBold;
+	line-height: 47px;
+	margin-top: 70px;
+}
+
+.date:first-child {
+	margin-top: 0;
+}

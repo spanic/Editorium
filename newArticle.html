@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Add a new article - CodeX</title>
+	<link rel="shortcut icon" href="addIcon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="normalize.css" type="text/css"/>
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+	<main>
+		<h1 class="mainTitle" contenteditable="true">Заголовок публикации</h1>
+
+		<div class="addButton">
+			<div class="icon-plus"></div>
+			<div class="container">
+				<div class="icon-title"></div>
+				<div class="icon-article"></div>
+				<div class="icon-image"></div>
+				<div class="icon-quote"></div>
+				<div class="icon-list"></div>
+				<div class="icon-video"></div>
+			</div>
+		</div>
+
+		<div class="l2Heading">
+			<h2 contenteditable="true">L2 Heading</h2>
+			<button class="delete" contenteditable="false" onclick="sayGoodbyeTo(this)"></button>
+			<br style="clear: both;">
+		</div>
+
+		<div class="article">
+			<button class="delete" contenteditable="false" onclick="sayGoodbyeTo(this)"></button>
+			<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+
+		<div class="image">
+			<button class="delete" contenteditable="false" onclick="sayGoodbyeTo(this)"></button>
+			<form class="upload" action="upload.php" method="POST" enctype="multipart/form-data">
+				<input type="hidden" class="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="3000000" />
+				<div>
+					<label for="fileselect">Select a .jpeg pic smaller than 3MB:</label>
+					<input type="file" class="fileselect" name="fileselect[]"/>
+					<div class="filedrag">or drop it right here!</div>
+				</div>
+				<div class="submitbutton">
+					<button type="submit">Upload Files</button>
+				</div>
+			</form>
+			<div class="progress"></div>
+			<div class="messages"></div>
+		</div>
+
+		<div class="quote">
+			<button class="delete" contenteditable="false" onclick="sayGoodbyeTo(this)"></button>
+			<p class="quoteText" contenteditable="true">Here will be the text of your quote ...</p>
+			<p class="quoteAuthor" contenteditable="true">... and here is a place for author</p>
+		</div>
+
+		<div class="newList">
+			<button class="delete" contenteditable="false" onclick="sayGoodbyeTo(this)"></button>
+			<ul contenteditable="true"><li>Add your text here</li><li>and here</li><li>maybe here?</li></ul>
+		</div>
+
+		<form id="publish" method="POST">
+			<textarea id="finalText" name="finalText"></textarea>
+			<button id="final" type="submit"><span>Save &amp; Publish</span></button>
+		</form>
+
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>
