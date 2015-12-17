@@ -1,2 +1,2 @@
 # Editorium
-My JS Experiment
+*My JS Experiment*
